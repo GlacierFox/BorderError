@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BorderThickness.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <VerticalStackLayout Grid.Column="1"
+                                 Spacing="0">
+                <Border StrokeThickness="0"
+                        Margin="5,5,5,0"
+                        Padding="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="3,3,0,0" />
+                    </Border.StrokeShape>
+                    <Label BackgroundColor="{StaticResource Secondary}"
+                           HeightRequest="30"
+                           HorizontalOptions="Fill" />
+                </Border>
+                <Border StrokeThickness="0"
+                        Margin="5,0,5,5"
+                        Padding="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="0,0,0,0" />
+                    </Border.StrokeShape>
+                    <Label BackgroundColor="{StaticResource Tertiary}"
+                           HeightRequest="30"
+                           HorizontalOptions="Fill" />
+
+                </Border>
+            </VerticalStackLayout>
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
